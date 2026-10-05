@@ -1,5 +1,9 @@
 //TipCalculatorproject
-let subTotal = document.getElementById("subTotalInput").valueAsNumber;
+let tipBtn= document.getElementById("tipButton");
+tipBtn.addEventListener('click' , function(){
+    console.log ("You Clicked")
+})
+let subTotal = document.getElementById(subTotalInput).valueAsNumber;
 let tipAmount;
 let totalBill;
 let tipPercentage = 0.2; 
