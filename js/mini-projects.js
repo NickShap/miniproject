@@ -1,5 +1,5 @@
 //TipCalculatorproject
-let subTotal = 67.72;
+let subTotal = document.getElementById("subTotalInput").valueAsNumber;
 let tipAmount;
 let totalBill;
 let tipPercentage = 0.2; 
