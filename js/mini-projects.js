@@ -15,3 +15,16 @@ let hoursWorked=167.5;
 let hourlyRate=4.25;
 let grossPay=hoursWorked*hourlyRate;
 console.log("Gross Pay: " + grossPay.toFixed(2));
+
+//Grade Calculator
+let pointsEarned = 85;
+let totalPoints = 100;
+let gradePercentage = (pointsEarned / totalPoints) * 100;
+console.log("Grade Percentage: " + gradePercentage + "%");
+
+//Gas cost clancualtor
+let totalDistance = 67; // miles
+let fuelEfficiency = 22; // miles per gallon
+let gasPrice = 8.43 ; // dollars per gallon
+let totalGasCost = (totalDistance / fuelEfficiency) * gasPrice;
+console.log("Total Gas Cost: " + totalGasCost.toFixed(2));
