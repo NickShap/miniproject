@@ -29,4 +29,20 @@ tipBtn.addEventListener('click', function () {
 let paycheckBtn = document.getElementById("paycheckButton");
 paycheckBtn.addEventListener('click', function () {
     //Paycheck Calculator Variables
+    let hoursWorked = document.getElementById('hoursWorkedInput').valueAsNumber
+    let hourlyRate = document.getElementById('hourlyRateInput').valueAsNumber
+    let paycheckAmount;
+
+    paycheckAmount = hoursWorked * hourlyRate;
+    paycheckAmount = paycheckAmount.toFixed(2);
+    checkOutput.innerHTML = "$" + paycheckAmount;
+})
+let percentGradeBtn = document.getElementById("gradeButton")
+percentGradeBtn.addEventListener('click', function () {
+    let pointsEarned = document.getElementById('pointsEarnedInput').valueAsNumber;
+    let totalPoints = document.getElementById('totalPointsInput').valueAsNumber;
+    let percentGrade;
+
+    percentGrade = (pointsEarned / totalPoints) * 100;
+    gradeOutput.innerHTML = percentGrade + "%"
 })
