@@ -1,34 +1,32 @@
-//TipCalculatorproject
-let tipBtn= document.getElementById("tipButton");
-tipBtn.addEventListener('click' , function(){
-    console.log ("You Clicked")
+let tipOutput = document.getElementById('tipAmountOutput');
+let TotalOutput = document.getElementById('totalBillOutput');
+let checkOutput = document.getElementById('paycheckAmountOutput');
+let gradeOutput = document.getElementById('percentGradeOutput');
+let gasOutput = document.getElementById('gasCostOutput');
+
+
+let tipBtn = document.getElementById("tipButton");
+tipBtn.addEventListener('click', function () {
+    //Tip Calculator Varables
+    let subTotal = document.getElementById('subTotalInput').valueAsNumber;
+    let percentage = document.getElementById('percentageInput').valueAsNumber;
+    let tipAmount;
+    let totalBill;
+
+    //Do the math
+    tipAmount = subTotal * percentage;
+    totalBill = subTotal + tipAmount;
+
+    //Only show 2 decimal places
+    tipAmount = tipAmount.toFixed(2);
+    totalBill = totalBill.toFixed(2);
+
+    //Show the output
+    tipOutput.innerHTML = "$" + tipAmount;
+    TotalOutput.innerHTML = "$" + totalBill;
 })
-let subTotal = document.getElementById(subTotalInput).valueAsNumber;
-let tipAmount;
-let totalBill;
-let tipPercentage = 0.2; 
 
-tipAmount = subTotal * tipPercentage;
-totalBill = subTotal + tipAmount;
-console.log("Tip Amount: " + tipAmount.toFixed(2));
-console.log("Total Bill: " + totalBill.toFixed(2));
-
-//Paycheck Calculator
-
-let hoursWorked=167.5;
-let hourlyRate=4.25;
-let grossPay=hoursWorked*hourlyRate;
-console.log("Gross Pay: " + grossPay.toFixed(2));
-
-//Grade Calculator
-let pointsEarned = 85;
-let totalPoints = 100;
-let gradePercentage = (pointsEarned / totalPoints) * 100;
-console.log("Grade Percentage: " + gradePercentage + "%");
-
-//Gas cost clancualtor
-let totalDistance = 67; // miles
-let fuelEfficiency = 22; // miles per gallon
-let gasPrice = 8.43 ; // dollars per gallon
-let totalGasCost = (totalDistance / fuelEfficiency) * gasPrice;
-console.log("Total Gas Cost: " + totalGasCost.toFixed(2));
+let paycheckBtn = document.getElementById("paycheckButton");
+paycheckBtn.addEventListener('click', function () {
+    //Paycheck Calculator Variables
+})
